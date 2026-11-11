@@ -12,6 +12,8 @@ const labTestRoutes = require("./routes/labTestRoutes");
 const admissionRoutes = require("./routes/admissionRoutes");
 const invoiceRoutes = require("./routes/invoiceRoutes");
 const reportRoutes = require("./routes/reportRoutes");
+const authRoutes = require("./routes/authRoutes");
+const testRoutes = require("./routes/testRoutes");
 
 const app = express();
 
@@ -32,7 +34,8 @@ app.use("/api/lab-tests", labTestRoutes);
 app.use("/api/admissions", admissionRoutes);
 app.use("/api/invoices", invoiceRoutes);
 app.use("/api/reports", reportRoutes);
-
+app.use("/api/auth", authRoutes);
+app.use("/api/test", testRoutes);
 
 // Test route
 app.get("/", (req, res) => {
